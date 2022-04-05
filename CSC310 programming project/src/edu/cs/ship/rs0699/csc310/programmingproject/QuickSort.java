@@ -86,7 +86,7 @@ public class QuickSort {
 	public void printDataSet() {
 		StringBuilder sb = new StringBuilder();
 		for (int i = 0; i < dataSet.length; i++) {
-			sb.append(dataSet[i]);
+			sb.append(dataSet[i] + "|");
 		}
 		System.out.println(sb.toString());
 	}
