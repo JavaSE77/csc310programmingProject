@@ -8,19 +8,18 @@ public class Main {
 	public static void main(String args[]) {
 		System.out.println("CSC 310 programming project. - Russell Stevens, Spring 2022");
 		
-		ArrayList<Integer> input = new ArrayList<Integer>();
-		input.add(4);
-		input.add(1);
-		input.add(5);
-		input.add(24);
-		input.add(345);
-		input.add(3);
-		input.add(7);
-		input.add(9);
-		input.add(2);
-		HeapSort heapSort = new HeapSort(input);
-		heapSort.printDataSet(heapSort.heapSort());
+		int dataSet[] = {1,5,7,2,8,3,4,6,12,0};
+		
+		MergeSort mergesort = new MergeSort(dataSet);
 
+		
+		int output[] = mergesort.mergeSort(dataSet);
+		System.out.println("Final product:");
+		mergesort.printDataSet(output);
+		
+		int left[] = {1,5};
+		int right[] = {2,6,8};
+		mergesort.printDataSet(mergesort.merge(left, right));
 	}
 	
 	public static void testQuickSort() {
@@ -37,7 +36,7 @@ public class Main {
 		int[] first = {1,5,7};
 		int[] second = {2,4,6};
 		MergeSort mergesort = new MergeSort(null);
-		ArrayList<Integer> output = mergesort.merge(first, second);
+		int[] output = mergesort.merge(first, second);
 		mergesort.printDataSet(output);
 		
 	}
@@ -49,4 +48,19 @@ public class Main {
 
 		
 	}
+	public static void testHeapSort() {
+		ArrayList<Integer> input = new ArrayList<Integer>();
+		input.add(4);
+		input.add(1);
+		input.add(5);
+		input.add(24);
+		input.add(345);
+		input.add(3);
+		input.add(7);
+		input.add(9);
+		input.add(2);
+		HeapSort heapSort = new HeapSort(input);
+		heapSort.printDataSet(heapSort.heapSort());
+	}
+	
 }
