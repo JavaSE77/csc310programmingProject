@@ -8,6 +8,60 @@ public class Main {
 	public static void main(String args[]) {
 		System.out.println("CSC 310 programming project. - Russell Stevens, Spring 2022");
 		
+		FileHandler fh = new FileHandler(
+				"C:\\Users\\Russell\\git\\csc310NumberGenerator\\CSC310 Random Generator\\SmallSamples\\SmallSample1.txt");
+
+		ArrayList<Integer> dataSet = fh.readFile();
+		int[] output = convertArrayToInt(dataSet);
+		
+//		HeapSort heapSort = new HeapSort(dataSet);
+//		ArrayList<Integer> test = heapSort.heapSort();
+//		System.out.println(dataSet.size() + "|" + test.size());
+//		heapSort.printDataSet(test);
+//		printArray(test);
+		
+//		QuickSort quickSort = new QuickSort(output);
+//		quickSort.quickSort(0, output.length-1);
+//		int[] test = quickSort.getDataSet();
+//		printArray(test);
+
+		
+		MergeSort mergeSort = new MergeSort(output);
+		mergeSort.mergeSort(output);
+		int[] test = mergeSort.getDataSet();
+		
+		printArray(test);
+
+		
+	}
+	
+	public static void printArray(int dataset[]) {
+		for (int i = 0; i < dataset.length; i++) {
+			System.out.println(dataset[i]);
+		}
+	}
+	
+	public static void printArrayList(ArrayList<Integer> dataset) {
+		for (int i = 0; i < dataset.size(); i++) {
+			System.out.println(dataset.get(i));
+		}
+	}
+	
+	public static int[] convertArrayToInt(ArrayList<Integer> dataSet) {
+		int[] output = new int[dataSet.size()];
+		
+		for(int i = 0; i < dataSet.size(); i++) {
+			
+			output[i] = dataSet.get(i);
+			
+		}
+		
+		return output;
+		
+	}
+	
+	public static void testMergeSortWorking() {
+		
 		int dataSet[] = {1,5,7,2,8,3,4,6,12,0};
 		
 		MergeSort mergesort = new MergeSort(dataSet);
@@ -20,6 +74,7 @@ public class Main {
 		int left[] = {1,5};
 		int right[] = {2,6,8};
 		mergesort.printDataSet(mergesort.merge(left, right));
+		
 	}
 	
 	public static void testQuickSort() {

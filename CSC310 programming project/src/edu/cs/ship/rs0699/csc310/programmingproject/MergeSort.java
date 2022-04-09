@@ -10,6 +10,11 @@ public class MergeSort {
 		this.dataSet = dataSet;
 	}
 	
+	public int[] getDataSet() {
+		return dataSet;
+	}
+	
+	
 	public int[] mergeSort(int input[]) {
 
 //		int[][] output = new int[dataSet.length][];
@@ -44,18 +49,11 @@ public class MergeSort {
 				printDataSet(temp);
 				placeHolder = merge(left, right);
 				printDataSet(placeHolder);
-				try {
-					Thread.sleep(500);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+
 			} else {
 				return input;
 			}
-		
-
-		
+		dataSet = placeHolder;
 		return placeHolder;
 	}
 	
@@ -116,7 +114,7 @@ public class MergeSort {
 			
 			if(indexSecond >= second.length) {
 				for(int i = indexFirst; i < first.length; i++) {
-					output[i + indexSecond+1] = (first[i]);
+					output[i + indexSecond] = (first[i]);
 				}
 			return output;
 			}
@@ -130,8 +128,8 @@ public class MergeSort {
 				indexSecond++;
 			} else if(first[indexFirst] == second[indexSecond]) {
 				output[indexFirst + indexSecond]= (first[indexFirst]);
-				output[indexFirst + indexSecond] = (second[indexSecond]);
 				indexFirst++;
+				output[indexFirst + indexSecond] = (second[indexSecond]);
 				indexSecond++;
 			}
 
