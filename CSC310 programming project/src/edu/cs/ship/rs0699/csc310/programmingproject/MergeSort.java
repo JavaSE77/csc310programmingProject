@@ -14,30 +14,13 @@ public class MergeSort {
 		return dataSet;
 	}
 	
-	
+	/**
+	 * I got really drunk and wrote this. 
+	 * I knew how it worked at the time
+	 * But I have no idea how it works now. 
+	 * */
 	public int[] mergeSort(int input[]) {
 
-//		int[][] output = new int[dataSet.length][];
-//		for(int i = 0; i < dataSet.length; i++) {
-//			output[i][0] = i;
-//		}
-//		boolean unsorted = true;
-//		int counter = 1;
-//		ArrayList<Integer> temp = new ArrayList<Integer>();
-//		while (unsorted) {
-//		for(int i = 0; i < (dataSet.length);) {
-//			
-//			
-//			
-//		i = i + (counter* 2);	
-//		}
-//		}
-		
-//		The bare essence of merge sort is you compare the two elements side by side,
-//		then compare the 4 elements side by side, ect. 
-//		this is going to result on the first run comparing the first two elements
-//		second run the first 4
-//		first 8, or 2^n
 		
 		int[] placeHolder = new int[input.length];
 
@@ -57,6 +40,12 @@ public class MergeSort {
 		return placeHolder;
 	}
 	
+	/**
+	 * Split an array into two arrays, first element being first array
+	 * and second element being second array
+	 * @param int input[]
+	 * @return int[][] output
+	 * */
 	public int[][] split(int input[]) {
 		int mid = input.length / 2;
 		int[] left = new int[mid];

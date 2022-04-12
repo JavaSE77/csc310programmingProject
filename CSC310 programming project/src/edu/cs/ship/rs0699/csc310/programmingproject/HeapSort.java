@@ -14,7 +14,9 @@ public class HeapSort {
 		this.dataSet = dataSet;
 	}
 	
-	
+	/**
+	 * HeapSort function! Yay!
+	 * */
 	public ArrayList<Integer> heapSort() {
 		ArrayList<Integer> output = new ArrayList<Integer>();		
 		
@@ -26,7 +28,11 @@ public class HeapSort {
 		return output;
 	}
 	
-	
+	/**
+	 * find the index of the max element
+	 * @param arrayList<int> input
+	 * @return index of max element
+	 * */
 	public int findMaxElementIndex(ArrayList<Integer> input) {
 		
 		int max = Integer.MIN_VALUE;
@@ -41,6 +47,11 @@ public class HeapSort {
 		return index;
 	}
 	
+	/**
+	 * Find the max element in an array
+	 * @param int[] input
+	 * @return index of max element
+	 * */
 	public int findMaxElementIndex(int[] input) {
 		
 		int max = Integer.MIN_VALUE;
