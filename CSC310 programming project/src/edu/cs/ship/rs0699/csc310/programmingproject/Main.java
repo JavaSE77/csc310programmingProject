@@ -15,7 +15,7 @@ public class Main {
 		System.out.println("CSC 310 programming project. - Russell Stevens, Spring 2022");
 		
 		FileHandler outputFile = new FileHandler(
-				"results.txt");
+				"results.csv");
 		outputFile.appendLine("Sort type,Sample type," + "run time" + "," + "run number");
 
 		//run the small samples
