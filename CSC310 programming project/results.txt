@@ -262,3 +262,10 @@ Heap sort,LargeSample,1707317222400,20
 Heap sort,LargeSample,2100824491100,21
 Heap sort,LargeSample,1644252335000,22
 Heap sort,LargeSample,1938916235100,23
+Heap sort,LargeSample,2622317680600,24
+Heap sort,LargeSample,3681492644500,25
+Heap sort,LargeSample,2535907885300,26
+Heap sort,LargeSample,3062899406100,27
+Heap sort,LargeSample,1767823400900,28
+Heap sort,LargeSample,1903150098600,29
+Heap sort,LargeSample,4265251510400,30
