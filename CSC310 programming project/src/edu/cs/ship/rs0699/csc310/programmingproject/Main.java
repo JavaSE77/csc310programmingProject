@@ -18,6 +18,16 @@ public class Main {
 				"results.csv");
 		outputFile.appendLine("Sort type,Sample type," + "run time" + "," + "run number");
 
+		//run the small samples sorted
+		runMergeSortSmallSamples("SortedSmallSample", outputFile);
+		runQuickSortSmallSamples("SortedSmallSample", outputFile);	
+		runHeapSortSmallSamples("SortedSmallSample", outputFile);
+		
+		//run the small samples reverse sorted
+		runMergeSortSmallSamples("ReverseSortedSmallSample", outputFile);
+		runQuickSortSmallSamples("ReverseSortedSmallSample", outputFile);	
+		runHeapSortSmallSamples("ReverseSortedSmallSample", outputFile);
+		
 		//run the small samples
 		runMergeSortSmallSamples("SmallSample", outputFile);		
 		//run the small samples
@@ -43,7 +53,8 @@ public class Main {
 		
 		
 	}
-
+	
+	
 	/**
 	 * Run Merge sort
 	 * @param String sample, FileHanlder outputFile
